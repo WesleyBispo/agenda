@@ -1,0 +1,77 @@
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    padding: 5%;
+    background: #21272d;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    margin-top: 10px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000000;
+}
+.login-form-2 .btnSubmit{
+    margin-top: 10px;
+    font-weight: 600;
+    color: #090b0e;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+ .form-control {
+    margin-top: 10px;
+ }
+
+.form-container {
+    height: auto;
+    padding: 20px;
+    background-color: #343a40; /* Cor de fundo escura */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    color: #fff; /* Cor do texto */
+}
+
+.btnContato{
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+
+.error-text {
+  font-size: 12px;
+  color: red;
+}
+

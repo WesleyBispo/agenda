@@ -1,0 +1,42 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav') %>
+
+<div class="container text-center d-flex justify-content-center align-items-center">
+    <div class="row"></div>
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3 text-center">
+        <div class="form-container">
+            <h1 class="text-center">Agenda</h1>
+            <p class="text-center lead">Crie ou edite seus contatos</p>
+
+            <%- include('./includes/messages') %>
+            <%#MESSAGES%>
+
+            <form class="form-contato" action="<%= contatoEncontrado._id ? `/contato/edit/${contatoEncontrado._id}` : `contato/register` %>" method="POST">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div class="form-group">
+                    <label for="inputName">Nome</label>
+                    <input type="text" id="inputName" class="form-control nome validar" placeholder="Seu nome *" name="nome" value="<%= contatoEncontrado && contatoEncontrado.nome ? contatoEncontrado.nome : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="inputSurname">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome" placeholder="Seu Sobrenome" name="sobrenome" value="<%= contatoEncontrado && contatoEncontrado.sobrenome ? contatoEncontrado.sobrenome : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control email validar" id="email validar" placeholder="Seu E-mail" name="email" value="<%= contatoEncontrado && contatoEncontrado.email ? contatoEncontrado.email : '' %>">
+                </div>
+                <div class="form-group">
+                    <label for="inputTel">Telefone</label>
+                    <input type="tel" class="form-control telefone" id="telefone validar" placeholder="Seu Telefone" name="telefone" value="<%= contatoEncontrado && contatoEncontrado.telefone ? contatoEncontrado.telefone : '' %>">
+                </div>
+
+                <input type="submit" class="btn btn-light btn-lg btnContato" value=<%= contatoEncontrado._id? 'Editar' : 'Cadastrar' %>>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
+<%- include('./includes/footer') %>

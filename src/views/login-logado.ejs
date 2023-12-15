@@ -1,0 +1,19 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav') %>
+
+<div class="container text-center d-flex justify-content-center align-items-center">
+    <div class="row"></div>
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3 text-center">
+        <h1 class="text-center">Olá <%= User.email %></h1>
+        <p class="text-center lead">Se você deseja criar uma nova conta, você deve sair da sessão atual</p>
+
+        <div class="my-3">
+            <a href="/logout" class="btn btn-dark">Sair da Conta</a>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
+<%- include('./includes/footer') %>

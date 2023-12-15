@@ -1,0 +1,48 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav') %>
+
+<div class="container text-center d-flex justify-content-center align-items-center">
+    <div class="row"></div>
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3 text-center">
+        <h1 class="text-center">Agenda</h1>
+        <p class="text-center lead">Seus contatos estão abaixo</p>
+        <%- include('./includes/messages') %>
+        <div class="responsive-table">
+            <table class="table table-bordered table-striped table-hover my-3">
+                <thead>
+                    <tr>
+                        <th scope="col">NOME</th>
+                        <th scope="col">SOBRENOME</th>
+                        <th scope="col">TELEFONE</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <% contatos.forEach((contato) => { %>
+                        <tr>
+                            <td><%= contato.nome %></td>
+                            <td><%= contato.sobrenome || "Sobrenome não cadastrado" %></td>
+                            <td><%= contato.telefone || "Telefone não cadastrado" %></td>
+                            <td><%= contato.email || "E-mail não cadastrado" %></td>
+                            <td>
+                                <a class="btn btn-warning btn-sm" href="/contato/<%=contato._id%>">Editar</a>
+                                <a class="btn btn-danger btn-sm" href="/contato/delete/<%=contato._id%>">Excluir</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">Total de contatos: <%= contatos.length %></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
+<%- include('./includes/footer') %>
