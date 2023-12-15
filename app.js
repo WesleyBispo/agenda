@@ -20,7 +20,7 @@ const contatoRoute = require('./routes/contatoRoute')
 
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Função para conectar ao MongoDB e retornar uma promessa
 async function conectarAoMongoDBAsync() {
@@ -87,7 +87,7 @@ async function iniciarServidor() {
 
   // Inicia o servidor
   app.listen(PORT, () => {
-    console.log(`SERVIDOR INICIADO EM http://localhost:${PORT}/login`);
+    console.log(`SERVIDOR INICIADO EM https://agenda-teste.onrender.com/login`);
   });
 }
 
